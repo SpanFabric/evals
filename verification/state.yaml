@@ -3,12 +3,12 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "evals",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "INDEPENDENT_REVIEW_PENDING",
-  "previous_status": "BUILDING",
+  "status": "READY_FOR_OWNER_ACCEPTANCE",
+  "previous_status": "INDEPENDENT_REVIEW_PENDING",
   "transition": {
-    "from": "BUILDING",
-    "to": "INDEPENDENT_REVIEW_PENDING",
-    "authority": "BUILDER"
+    "from": "INDEPENDENT_REVIEW_PENDING",
+    "to": "READY_FOR_OWNER_ACCEPTANCE",
+    "authority": "FRESH_BREAKER"
   },
   "risk": {
     "class": "R2",
@@ -233,6 +233,19 @@
       "verdict": "BUILDER_GREEN",
       "active": true,
       "report_path": "verification/reports/SHARED_FB_001_BUILDER_20261022.json"
+    },
+    {
+      "id": "SHARED-FB-001-FRESH-BREAKER-V2-20261022",
+      "type": "BREAKER_REPORT",
+      "producer": "FRESH_BREAKER",
+      "role": "FRESH_BREAKER",
+      "authority": "MANUAL_AUTHORITY",
+      "commit_sha": "3d706158ca4fa3486d99af0462b0b5653ff1e333",
+      "review_subject_digest": "af7e63910d24fb507f86d52553adbfb15a7344a1c0dd778e8337bd8c5f5bbded",
+      "created_at": "2026-10-22T12:42:44.793036+00:00",
+      "verdict": "PASS",
+      "active": true,
+      "report_path": "verification/reports/SHARED_FB_001_FRESH_BREAKER_V2_20261022/report.json"
     }
   ],
   "remediation_inputs": [
@@ -340,12 +353,22 @@
       "id": "SHARED-FB-001",
       "severity": "BLOCKER",
       "confirmed": true,
-      "status": "OPEN",
+      "status": "VERIFIED",
       "builder_disposition": "REMEDIATED_PENDING_FRESH_BREAKER",
       "builder_material_sha": "3d706158ca4fa3486d99af0462b0b5653ff1e333",
       "builder_review_subject_digest": "af7e63910d24fb507f86d52553adbfb15a7344a1c0dd778e8337bd8c5f5bbded",
       "builder_report_path": "verification/reports/SHARED_FB_001_BUILDER_20261022.json",
-      "summary": "Durable history reachability remediation has Builder evidence only; independent closure required."
+      "summary": "Durable history reachability remediation has Builder evidence only; independent closure required.",
+      "verification": {
+        "review_id": "SHARED-FB-001-FRESH-BREAKER-V2-20261022",
+        "evidence_id": "SHARED-FB-001-FRESH-BREAKER-V2-20261022",
+        "report_path": "verification/reports/SHARED_FB_001_FRESH_BREAKER_V2_20261022/report.json",
+        "material_sha": "3d706158ca4fa3486d99af0462b0b5653ff1e333",
+        "review_subject_digest": "af7e63910d24fb507f86d52553adbfb15a7344a1c0dd778e8337bd8c5f5bbded",
+        "verdict": "FRESH_BREAKER_ACCEPTED",
+        "authority": "FRESH_BREAKER",
+        "reason": "Independent durable Git-history bypass matrix, historical-policy reconstruction, immutable trusted runner and full relevant suites passed for exact material subject."
+      }
     }
   ],
   "initial_baseline_bootstrap": {
