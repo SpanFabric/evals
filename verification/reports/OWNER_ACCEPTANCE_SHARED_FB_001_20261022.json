@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "id": "OWNER-ACCEPTANCE-SHARED-FB-001-EVALS-20261022",
+  "type": "ACCEPTANCE",
+  "producer": "OWNER",
+  "role": "OWNER",
+  "authority": "MANUAL_AUTHORITY",
+  "owner": "severinafrancic",
+  "persisted_by": "Codex acting on explicit Owner instruction; not independent review or cryptographic identity proof",
+  "created_at": "2026-10-22T13:38:09.685700+00:00",
+  "verdict": "ACCEPTED",
+  "repository": "SpanFabric/evals",
+  "pr": 3,
+  "accepted_pr_head": "d52f320bc89b7940ccfbc39e87effd19e4712c26",
+  "commit_sha": "3d706158ca4fa3486d99af0462b0b5653ff1e333",
+  "review_subject_digest": "af7e63910d24fb507f86d52553adbfb15a7344a1c0dd778e8337bd8c5f5bbded",
+  "fresh_breaker_report": {
+    "path": "verification/reports/SHARED_FB_001_FRESH_BREAKER_V2_20261022/report.json",
+    "sha256": "490b1c86d059690a8ad08b12bbe9d8ba040c7813821e2e184e12a8158172fd56",
+    "verdict": "FRESH_BREAKER_ACCEPTED"
+  },
+  "authorization": "Explicit Owner instruction in this task: recheck exact heads, READY, active valid Fresh Breaker evidence, unchanged material, green CI; persist READY_FOR_OWNER_ACCEPTANCE -> ACCEPTED by OWNER; normal metadata-only push followed by exact-new-head CI; no merge, material edits, UP-003, failed persistence PRs, migration, or gate/phase advancement.",
+  "pre_acceptance_checks": {
+    "verification-gate": [
+      {
+        "id": 119835774209,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/SpanFabric/evals/actions/runs/39781235266/job/119835774209"
+      }
+    ],
+    "bootstrap-integrity": [
+      {
+        "id": 119832724475,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/SpanFabric/evals/actions/runs/39781235289/job/119832724475"
+      }
+    ],
+    "windows-trusted-runner": [
+      {
+        "id": 119832757167,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/SpanFabric/evals/actions/runs/39781235266/job/119832757167"
+      }
+    ]
+  },
+  "transition": {
+    "from": "READY_FOR_OWNER_ACCEPTANCE",
+    "to": "ACCEPTED",
+    "authority": "OWNER"
+  },
+  "limitations": [
+    "MANUAL_AUTHORITY; no cryptographic human-identity assertion",
+    "New metadata-head CI is a separate required observation after normal push",
+    "Owner acceptance does not grant merge or phase/gate advancement"
+  ],
+  "merge_performed": false,
+  "migration_started": false
+}
