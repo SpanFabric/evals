@@ -3,12 +3,12 @@
   "bridge_version": "manual-verification-bridge-v1",
   "repository": "evals",
   "authority_mode": "MANUAL_AUTHORITY",
-  "status": "ACCEPTED",
-  "previous_status": "READY_FOR_OWNER_ACCEPTANCE",
+  "status": "MERGED",
+  "previous_status": "ACCEPTED",
   "transition": {
-    "from": "READY_FOR_OWNER_ACCEPTANCE",
-    "to": "ACCEPTED",
-    "authority": "OWNER"
+    "from": "ACCEPTED",
+    "to": "MERGED",
+    "authority": "MERGE_HOSTING_GATE"
   },
   "risk": {
     "class": "R2",
@@ -300,6 +300,20 @@
       "verdict": "ACCEPTED",
       "active": true,
       "report_path": "verification/reports/OWNER_ACCEPTANCE_MISSING_PARENT_FIXTURE_20261026.json"
+    },
+    {
+      "id": "MERGE_STATE-MISSING-PARENT-FIXTURE-EVALS-20261026",
+      "type": "MERGE_STATE",
+      "producer": "MERGE_HOSTING_GATE",
+      "role": "MERGE_HOSTING_GATE",
+      "authority": "MANUAL_AUTHORITY",
+      "created_at": "2026-10-26T08:01:38.112881+00:00",
+      "verdict": "MERGED",
+      "commit_sha": "0ab2c9f5d762fcef82287d2206c0ec0db64f70c5",
+      "merge_commit_sha": "0ab2c9f5d762fcef82287d2206c0ec0db64f70c5",
+      "review_subject_digest": "da67a1981f6493cf9f403648ea8e53e504b8b1112b42cffc181fa0466fbc6488",
+      "active": true,
+      "report_path": "verification/reports/MERGE_STATE_MISSING_PARENT_FIXTURE_20261026.json"
     }
   ],
   "remediation_inputs": [
@@ -465,5 +479,6 @@
     "Owner-authorized append-only persistence of FBR-WTR-001-POSITIVE-PATH-FALLBACK-FINAL-20261004: technical ACCEPTED bound to material fbba464309d2f3ca9216ecfb8131fe968f906302 and digest 91c848a00407d394d90402a6b56632faa9466595b7e5345ebff37e817fb2ef9b. Historical reports remain unchanged and historical failed Fresh BREAKER state evidence remains inactive. READY_FOR_OWNER_ACCEPTANCE is technical readiness only; hosting controls, Owner Acceptance, merge/post-merge, GATE-000 PASS, PHASE-000 completion and PHASE-001 authorization are not performed.",
     "SHARED-FB-001 new material work reopens the exact PR subject through BUILDER. No Fresh Breaker, Owner or merge authority is asserted.",
     "SHARED-FB-001 Builder evidence binds new material 3d706158ca4fa3486d99af0462b0b5653ff1e333; prior Builder/Owner/Fresh Breaker evidence inactive for this digest. Full history checked; no independent acceptance or merge."
-  ]
+  ],
+  "resulting_merge_commit_sha": "0ab2c9f5d762fcef82287d2206c0ec0db64f70c5"
 }
